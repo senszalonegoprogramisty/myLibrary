@@ -1,5 +1,7 @@
 package com.example.bookLibrary.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -15,6 +17,11 @@ public class AddressEntity {
     private String city;
     @Column(name = "zip_code")
     private String zipCode;
+
+    @JsonIgnore
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "lender_id")
+    private LenderEntity lender;
 
     public AddressEntity() {
 
@@ -50,5 +57,13 @@ public class AddressEntity {
 
     public String getZipCode() {
         return zipCode;
+    }
+
+    public LenderEntity getLender() {
+        return lender;
+    }
+
+    public void setLender(LenderEntity lender) {
+        this.lender = lender;
     }
 }

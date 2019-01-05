@@ -13,7 +13,9 @@ public class LenderEntity {
     private String name;
     @Column(name = "surname")
     private String surname;
-    // private AddressEntity address;
+
+    @OneToOne(mappedBy = "lender", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private AddressEntity address;
 
     public LenderEntity() {
 
@@ -41,5 +43,13 @@ public class LenderEntity {
 
     public String getSurname() {
         return surname;
+    }
+
+    public AddressEntity getAddress() {
+        return address;
+    }
+
+    public void setAddress(AddressEntity address) {
+        this.address = address;
     }
 }
