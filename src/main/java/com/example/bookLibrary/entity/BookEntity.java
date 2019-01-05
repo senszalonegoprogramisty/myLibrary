@@ -2,6 +2,9 @@ package com.example.bookLibrary.entity;
 
 import javax.persistence.*;
 
+/**
+ * powiazanie tabeli z obiektem javowym
+ */
 @Entity
 @Table(name = "book")
 public class BookEntity {

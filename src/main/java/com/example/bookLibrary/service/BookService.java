@@ -12,4 +12,6 @@ public interface BookService {
     BookEntity getBookById(Long id);
 
     BookEntity addBook(BookEntity book);
+
+    BookEntity getBookByTitle(String title);
 }

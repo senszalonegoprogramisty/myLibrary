@@ -32,4 +32,9 @@ public class BookServiceImpl implements BookService {
     public BookEntity addBook(BookEntity book) {
         return bookRepository.save(book);
     }
+
+    @Override
+    public BookEntity getBookByTitle(String title) {
+        return bookRepository.findByTitleEquals(title).get();
+    }
 }
