@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-//TODO sprawdzanie czy uzytkownik nic nie zepsuje i obsluga bledow
+//TODO sprawdzanie czy uzytkownik nic nie zepsuje i obsluga bledow 
 @Service
 public class LenderServiceImpl implements LenderService {
 
