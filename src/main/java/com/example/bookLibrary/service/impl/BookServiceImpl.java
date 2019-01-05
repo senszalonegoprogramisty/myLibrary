@@ -25,11 +25,11 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public BookEntity getBookById(Long id) {
-        return null;
+        return bookRepository.findById(id).get();
     }
 
     @Override
     public BookEntity addBook(BookEntity book) {
-        return null;
+        return bookRepository.save(book);
     }
 }
