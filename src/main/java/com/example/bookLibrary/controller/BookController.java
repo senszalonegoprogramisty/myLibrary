@@ -18,7 +18,7 @@ public class BookController {
         this.bookService = bookService;
     }
 
-    //(na starcie) to co chce zbey controller robil i return null
+    //(na starcie) to co chce zeby controller robil i return null
     @RequestMapping(path = "/all", method = RequestMethod.GET)
     public List<BookEntity> getAllBooks() {
         return bookService.getAllBooks();
