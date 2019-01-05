@@ -1,12 +1,27 @@
 package com.example.bookLibrary.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "book")
 public class BookEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @Column(name = "title")
     private String title;
+    @Column(name = "author")
     private String author;
+    @Column(name = "isbn")
     private String isbn;
 
     public BookEntity() {
 
+    }
+
+    private long getId(){
+        return id;
     }
 
     public void setTitle(String title) {
