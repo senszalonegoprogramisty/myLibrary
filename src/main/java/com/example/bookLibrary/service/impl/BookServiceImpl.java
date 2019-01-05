@@ -20,7 +20,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<BookEntity> getAllBooks() {
-        return null;
+        return (List<BookEntity>) bookRepository.findAll();
     }
 
     @Override
