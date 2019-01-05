@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class AddressEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "street")
     private String street;
@@ -20,7 +20,11 @@ public class AddressEntity {
 
     }
 
-    private long getId(){
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    private Long getId(){
         return id;
     }
 

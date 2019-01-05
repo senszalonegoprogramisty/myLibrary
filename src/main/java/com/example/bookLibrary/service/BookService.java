@@ -14,4 +14,6 @@ public interface BookService {
     BookEntity addBook(BookEntity book);
 
     BookEntity getBookByTitle(String title);
+
+    void deleteBook(Long id);
 }

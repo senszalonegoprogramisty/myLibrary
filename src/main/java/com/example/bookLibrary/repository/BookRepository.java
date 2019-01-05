@@ -11,5 +11,6 @@ import java.util.Optional;
 public interface BookRepository extends CrudRepository<BookEntity, Long> {
 
     Optional<BookEntity> findByTitleEquals(String title);
-    
+
+    Optional<BookEntity> findByIsbnEquals(String isbn);
 }

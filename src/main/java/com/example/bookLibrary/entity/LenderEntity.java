@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class LenderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "name")
     private String name;
@@ -19,7 +19,11 @@ public class LenderEntity {
 
     }
 
-    private long getId() {
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    private Long getId() {
         return id;
     }
 

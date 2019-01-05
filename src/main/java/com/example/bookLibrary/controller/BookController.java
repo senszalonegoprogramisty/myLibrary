@@ -38,4 +38,9 @@ public class BookController {
     public BookEntity getBookByTitle(@PathVariable String title) {
         return bookService.getBookByTitle(title);
     }
+
+    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
+    public void deleteBook(@PathVariable Long id) {
+        bookService.deleteBook(id);
+    }
 }
