@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-//TODO uzupelnic metody
+
 @RestController
 @RequestMapping("lender")
 public class LenderController {
@@ -22,29 +22,31 @@ public class LenderController {
 
     @RequestMapping(path = "/all", method = RequestMethod.GET)
     public List<LenderEntity> getAllLenders(){
-        return null;
+        return lenderService.getAllLenders();
     }
 
     @RequestMapping(path = "", method = RequestMethod.POST)
     public LenderEntity addLender(@RequestBody LenderEntity lender){
-        return null;
+        return lenderService.addLender(lender);
     }
 
     @RequestMapping(path = "/{id}", method = RequestMethod.GET)
-    public LenderEntity getLenderById(@PathVariable long id){
-        return null;
+    public LenderEntity getLenderById(@PathVariable Long id){
+        return lenderService.getLenderById(id);
     }
 
-    @RequestMapping(path = "/{name}", method = RequestMethod.GET)
+    @RequestMapping(path = "/name/{name}", method = RequestMethod.GET)
     public LenderEntity getLenderByName(@PathVariable  String name) {
-        return null;
+        return lenderService.getLenderByName(name);
     }
 
-    @RequestMapping(path = "/{surname}", method = RequestMethod.GET)
+    @RequestMapping(path = "/surname/{surname}", method = RequestMethod.GET)
     public LenderEntity getLenderBySurname(@PathVariable String surname) {
-        return null;
+        return lenderService.getLenderBySurname(surname);
     }
 
-
-
+    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
+    public void deleteBook(@PathVariable Long id) {
+        lenderService.deleteLender(id);
+    }
 }
