@@ -4,7 +4,6 @@ public class LendInfoDto {
 
     private Long lenderId;
     private Long bookId;
-    private String dateFrom;
     private String dateTo;
 
     public Long getLenderId() {
@@ -21,14 +20,6 @@ public class LendInfoDto {
 
     public void setBookId(Long bookId) {
         this.bookId = bookId;
-    }
-
-    public String getDateFrom() {
-        return dateFrom;
-    }
-
-    public void setDateFrom(String dateFrom) {
-        this.dateFrom = dateFrom;
     }
 
     public String getDateTo() {
