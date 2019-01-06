@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name = "lend_info")
 public class LendInfoEntity {
 
     @Id
