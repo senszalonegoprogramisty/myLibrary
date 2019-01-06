@@ -1,5 +1,6 @@
 package com.example.bookLibrary.service.impl;
 
+import com.example.bookLibrary.entity.AddressEntity;
 import com.example.bookLibrary.entity.LenderEntity;
 import com.example.bookLibrary.exceptions.BadRequestException;
 import com.example.bookLibrary.exceptions.ResourceNotFoundException;

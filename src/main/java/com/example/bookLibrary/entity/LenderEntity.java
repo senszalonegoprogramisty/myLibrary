@@ -50,6 +50,14 @@ public class LenderEntity {
     }
 
     public void setAddress(AddressEntity address) {
+        if (address == null) {
+            if (this.address != null) {
+                this.address.setLender(null);
+            }
+        }
+        else {
+            address.setLender(this);
+        }
         this.address = address;
     }
 }
